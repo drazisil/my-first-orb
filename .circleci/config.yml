@@ -1,2 +1,10 @@
 version: 2.1
-# Starting fresh.
+
+orbs:
+  # https://circleci.com/orbs/registry/orb/circleci/hello-build
+  hello: circleci/hello-build@0.0.13 # uses the circleci/buildpack-deps Docker image
+
+workflows:
+  'Hello Workflow':
+    jobs:
+      - hello/hello-build
